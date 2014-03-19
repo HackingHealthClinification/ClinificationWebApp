@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <title> Clinification</title>
+  <link rel="stylesheet" href="css/app.css"/>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/flick/jquery-ui.css"/>
+
+  <link href="lib/notification.css" rel="stylesheet" media="screen">
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Gafata' rel='stylesheet' type='text/css'>
+
+  <script src="js/log.js"></script>
+</head>
+<body>
+
+<div id="body">
+
+    <header ng-controller="MenuCtrl">
+        <a href="#" rel="home"><img id="logo" src="images/logo.jpg">
+        </a>
+
+        <!--<a ng-click="doTheBack()">back</a>-->
+        <ul class="menu" >
+            <li ng-repeat="link in menu"><a href="{{link.url}}"> {{link.name}}</a></li>
+        </ul>
+    </header>
+
+    <div id="content" ng-view>
+    </div>
+
+<!--  libs-->
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/moment/moment.js"></script>
+<script src="bower_components/jquery/jquery.js"></script>
+<script src="bower_components/jqueryui/ui/minified/jquery-ui.min.js"></script>
+<script src="lib/notification.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular-animate.min.js"></script>
+<script src="https://cdn.firebase.com/v0/firebase.js"></script>
+<script src="https://cdn.firebase.com/libs/angularfire/0.6.0/angularfire.js"></script>
+<script type='text/javascript'  src='https://cdn.firebase.com/js/simple-login/1.2.5/firebase-simple-login.js'>   </script>
+
+
+<!--Bootstrap-->
+<script src="lib/bootstrap/ui-bootstrap-tpls-0.3.0.js"></script>
+
+<script src="js/app.js"></script>
+
+<!-- CONTROLLER-->
+<script src="js/controllers.js"></script>
+<script src="js/modules/menu/menu.js"></script>
+
+<!--        app-->
+<script src="js/modules/user/login.js"></script>
+<script src="js/modules/appointment/create.js"></script>
+<script src="js/modules/appointment/list.js"></script>
+
+</div>
+</body>
+</html>
