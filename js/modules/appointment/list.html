@@ -1,0 +1,44 @@
+<section id="appointments">
+
+<h3>Clinic Schedule</h3>
+  <a class="button-right" href="#" >Send SMS Confirmation to Next 10 Appt</a>
+  <div class="date">Sunday 23, Feb 2014</div>
+<table class="table">
+<tr>
+  <th class="col-date">Date</th>
+  <th>Last Name</th>
+  <th>First Name</th>
+  <!--<th>Description</th>-->
+  <!--<th ng-click="predicate = 'category'; reverse=false">Category</th>-->
+  <th>Appt. Purpose</th>
+  <th>Confirmation</th>
+</tr>
+<tr ng-repeat="appointment in listAppointments | orderBy:appointment.date">
+  <!--<td>{{appointment.date | amDateFormat:'dddd, MMMM Do YYYY, h:mm:ss a'}}</td>-->
+  <td >{{appointment.datef}}</td>
+  <td>{{appointment.lastName}}</td>
+  <td>{{appointment.firstName}}</td>
+  <!--<td>{{appointment.description}}</td>-->
+  <td  >{{appointment.category}}</td>
+    <td >
+      <div class="cell">
+        <div ng-if="appointment.status == 'confirmed'">
+          <p class="confirmed">Confirmed </p>
+          <!--<button  ng-click="sendConfirmation()">Call</button>-->
+        </div>
+        <div ng-if="appointment.status == 'declined'">
+          <p class="declined" >Declined </p>
+          <!--<button  ng-click="sendConfirmation()">Call</button>-->
+        </div>
+        <div ng-if="appointment.status == 'waiting-answer'">
+          <p>Waiting Answer </p>
+          <!--<button  ng-click="sendConfirmation()">Call</button>-->
+        </div>
+          <button class="send-sms" ng-if="appointment.status == 'not-confirmed'"  href="" ng-click="sendConfirmation()">Send SMS</button>
+      </div>
+    </td>
+
+</tr>
+</table>
+  <div notifications="bottom left"></div>
+</section>

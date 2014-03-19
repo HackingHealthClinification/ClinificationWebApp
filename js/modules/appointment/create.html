@@ -1,0 +1,90 @@
+<section id="create-appointment">
+
+  <form class="form-horizontal">
+    <fieldset>
+
+      <!-- Form Name -->
+      <legend>Form Name</legend>
+
+      <!-- Text input-->
+      <div class="control-group">
+        <label class="control-label" for="lastname">Last Name</label>
+        <div class="controls">
+          <input id="lastname" name="lastname" ng-model="lastName" type="text" placeholder="" class="input-xlarge" required="">
+
+        </div>
+      </div>
+
+      <!-- Text input-->
+      <div class="control-group">
+        <label class="control-label" for="firstName">First Name</label>
+        <div class="controls">
+          <input id="firstName" name="firstName" ng-model="firstName" type="text" placeholder="" class="input-xlarge">
+
+        </div>
+      </div>
+
+      <!-- Text input-->
+      <div class="control-group">
+        <label class="control-label" for="phone">Phone</label>
+        <div class="controls">
+          <input id="phone" type="phone" name="phone" type="text"  ng-model="phone"  placeholder="" class="input-xlarge" required="">
+
+        </div>
+      </div>
+
+      <!-- Text input-->
+      <div class="control-group">
+
+        <!--<div class="dropdown">-->
+        <!--<a class="dropdown-toggle" id="dropdown2" role="button" data-toggle="dropdown" data-target="#" href="#">-->
+        <!--<div class="input-append"><input type="text" class="input-large" data-ng-model="data.dateDropDownInput"><span class="add-on"><i class="icon-calendar"></i></span>-->
+        <!--</div>-->
+        <!--</a>-->
+        <!--<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">-->
+        <!--<datetimepicker data-ng-model="data.dateDropDownInput" data-datetimepicker-config="{ dropdownSelector: '#dropdown2' }"/>-->
+        <!--</ul>-->
+        <!--</div>-->
+
+        <!-- Datetime example -->
+        <div class="form-group">
+          <label class="control-label" for="datetime"><i class="fa fa-calendar"></i> Datetime picker</label>
+          <div class="controls" id="datetime">
+            <input type="text" size="10" class="form-control" ng-model="sharedDate" data-autoclose="1" placeholder="Date" bs-datepicker>
+
+            <input type="text" size="8" class="form-control" ng-model="sharedDate" data-autoclose="1" placeholder="Time" bs-timepicker>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Select Basic -->
+      <div class="control-group">
+        <label class="control-label" for="category">Category</label>
+        <div class="controls">
+          <select id="category" name="category" ng-model="category" class="input-xlarge">
+            <option>Pediatry</option>
+            <option>blablaabl</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Textarea -->
+      <div class="control-group">
+        <label class="control-label" for="description">description</label>
+        <div class="controls">
+          <textarea id="description"  rows="7" cols="300" ng-model="description" name="description">default text</textarea>
+        </div>
+      </div>
+
+      <!-- Button -->
+      <div class="control-group">
+        <label class="control-label" for=""></label>
+        <div class="controls">
+          <button id="" name="" ng-click="createAppointment()" class="btn btn-primary">Create Appointment</button>
+        </div>
+      </div>
+
+    </fieldset>
+  </form>
+</section>
